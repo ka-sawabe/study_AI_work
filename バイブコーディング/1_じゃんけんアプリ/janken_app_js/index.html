@@ -15,8 +15,12 @@
             <button onclick="playGame('パー')">パー</button>
         </div>
         <div id="result">
-            <p>ボタンを押して勝負！</p>
+            <p>ボタンを押して勝負！（残り5回）</p>
         </div>
+        <div id="score">
+            <p>勝ち: 0 | 負け: 0 | あいこ: 0</p>
+        </div>
+        <button id="resetButton" style="display:none;" onclick="resetGame()">リセット</button>
     </div>
     <script src="script.js"></script>
 </body>
