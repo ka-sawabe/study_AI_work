@@ -39,7 +39,8 @@ function playGame(userChoice) {
     `;
 
     if (playCount >= maxPlays) {
-        document.querySelector('.buttons').style.display = 'none';
+        const buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(button => button.disabled = true);
         document.getElementById('resetButton').style.display = 'block';
         document.getElementById('result').innerHTML += '<p>ゲーム終了！</p>';
     }
@@ -50,7 +51,8 @@ function resetGame() {
     loseCount = 0;
     tieCount = 0;
     playCount = 0;
-    document.querySelector('.buttons').style.display = 'block';
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach(button => button.disabled = false);
     document.getElementById('resetButton').style.display = 'none';
     document.getElementById('result').innerHTML = '<p>ボタンを押して勝負！（残り5回）</p>';
     document.getElementById('score').innerHTML = '<p>勝ち: 0 | 負け: 0 | あいこ: 0</p>';
