@@ -3,11 +3,13 @@
 ## 1. デザイン方針
 - シンプルで直感的なUIとし、ボタンを押すだけで即座に結果がわかる構成にします。
 - HTMLで構造を、CSSでレイアウトを、JSでロジックを分離して記述します。
+- 画面全体を中央ぞろえに配置します。
 
 ## 2. 画面レイアウト案
 - タイトル：「じゃんけんゲーム」
 - 手選択エリア：グー・チョキ・パーの3つのボタン
 - 結果表示エリア：
+  - あなたの手
   - コンピュータの手
   - 勝敗結果
 
@@ -23,9 +25,10 @@ janken_app_js/
 
 ### index.html
 - ボタン要素: `btn-rock`, `btn-scissors`, `btn-paper`
-- 結果表示エリア: `#result-computer`, `#result-text`
+- 結果表示エリア: `#result-user`, `#result-computer`, `#result-text`
 
 ### style.css
+- body: 中央ぞろえ
 - ボタン配置の装飾、結果テキストのフォント・カラー指定
 
 ### script.js
@@ -33,4 +36,4 @@ janken_app_js/
 - `handleChoice(userChoice)`: ユーザーの選択を受け取り、勝敗判定ロジックを呼び出す
 - `getComputerChoice()`: ランダムにグー・チョキ・パーを選択する関数
 - `determineWinner(user, computer)`: 勝ち・負け・あいこを判定する関数
-- `updateUI(computerChoice, result)`: 画面の結果表示エリアを更新する関数
+- `updateUI(user, computer, result)`: 画面の結果表示エリアを更新する関数
