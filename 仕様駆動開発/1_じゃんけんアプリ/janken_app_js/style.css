@@ -1,0 +1,14 @@
+/* ボタンの配置を整える */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 結果表示エリアの装飾 */
+#result-area {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
