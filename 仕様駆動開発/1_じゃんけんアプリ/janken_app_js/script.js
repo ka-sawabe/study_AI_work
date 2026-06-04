@@ -40,10 +40,12 @@ const game = new JankenGame();
 
 /**
  * 結果を画面のDOM要素に表示する
+ * @param {string} userChoice ユーザーの手
  * @param {string} computerChoice コンピュータの手
  * @param {string} result 勝敗結果
  */
-function updateUI(computerChoice, result) {
+function updateUI(userChoice, computerChoice, result) {
+    document.getElementById('result-user').textContent = userChoice;
     document.getElementById('result-computer').textContent = computerChoice;
     document.getElementById('result-text').textContent = result;
 }
@@ -58,7 +60,7 @@ function handleChoice(userChoice) {
     // 2. 勝敗を判定する
     const result = game.judge(userChoice, computerChoice);
     // 3. 結果をUIに反映する
-    updateUI(computerChoice, result);
+    updateUI(userChoice, computerChoice, result);
 }
 
 // 各ボタンにクリックイベントリスナーを登録する
