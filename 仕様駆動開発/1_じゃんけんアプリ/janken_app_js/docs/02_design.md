@@ -12,6 +12,8 @@
   - あなたの手
   - コンピュータの手
   - 勝敗結果
+  - 残り試行回数
+  - 合計勝敗スコア（勝ち数・負け数・あいこ数）
 
 ## 3. ファイル構成
 ```
@@ -25,7 +27,7 @@ janken_app_js/
 
 ### index.html
 - ボタン要素: `btn-rock`, `btn-scissors`, `btn-paper`
-- 結果表示エリア: `#result-user`, `#result-computer`, `#result-text`
+- 結果表示エリア: `#result-user`, `#result-computer`, `#result-text`, `#remaining-count`, `#score-board`
 
 ### style.css
 - body: 中央ぞろえ
@@ -36,4 +38,4 @@ janken_app_js/
 - `handleChoice(userChoice)`: ユーザーの選択を受け取り、勝敗判定ロジックを呼び出す
 - `getComputerChoice()`: ランダムにグー・チョキ・パーを選択する関数
 - `determineWinner(user, computer)`: 勝ち・負け・あいこを判定する関数
-- `updateUI(user, computer, result)`: 画面の結果表示エリアを更新する関数
+- `updateUI(user, computer, result, remaining, score)`: 画面の結果表示エリアを更新する関数
