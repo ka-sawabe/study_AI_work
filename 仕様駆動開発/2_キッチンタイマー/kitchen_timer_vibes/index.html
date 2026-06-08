@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キッチンタイマー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- タイマー表示エリア -->
+        <div id="display">00:00</div>
+
+        <!-- 入力エリア -->
+        <div id="input-area">
+            <input type="number" id="minutes" placeholder="分" min="0">
+            <input type="number" id="seconds" placeholder="秒" min="0" max="59">
+        </div>
+
+        <!-- 操作エリア -->
+        <div id="controls">
+            <button id="start">スタート</button>
+            <button id="stop">ストップ</button>
+            <button id="reset">リセット</button>
+        </div>
+
+        <!-- メッセージエリア -->
+        <div id="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
