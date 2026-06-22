@@ -36,9 +36,9 @@ kitchen_timer/
     - `isRunning`: 動作中かどうか（boolean）
 
 - **主要メソッド**:
-    - `start()`: カウントダウンを開始する（タイマーIDを保存）
-    - `stop()`: カウントダウンを停止する（clearInterval）
-    - `reset()`: 時間を0に戻し、画面を更新する
+    - `start()`: タイマーを開始（または一時停止状態から再開）する。
+    - `stop()`: タイマーを一時停止し、isRunningをfalseにする。
+    - `reset()`: タイマーを停止し、残り時間を0に戻し、画面表示と入力欄をクリアする。
     - `update()`: 1秒ごとに`remainingTime`を減らし、画面表示を更新する
     - `checkEnd()`: `remainingTime`が0になった場合、停止して終了メッセージを表示する
 
