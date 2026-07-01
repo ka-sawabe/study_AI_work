@@ -1,1 +1,0 @@
-useEffectで取得したver
